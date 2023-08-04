@@ -181,3 +181,55 @@ margin-top: 0;
     color:black;
     line-height: 1.5;
   }
+
+  /* Small screens */
+@media screen and (max-width: 768px) {
+  .music-player {
+    width: 90%; /* Adjust the width for smaller screens */
+    height: auto; /* Allow the height to adjust based on content */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .artist-image img {
+    
+    width: 100%; /* Make the image responsive */
+    max-height: 100px; /* Limit the maximum height of the image on small screens */
+    border-radius: 5%;
+    object-fit: cover;
+  }
+
+  .controls {
+    flex-wrap: wrap; /* Allow the controls to wrap on smaller screens */
+  }
+
+  #lyrics {
+    height: auto; /* Allow lyrics container height to adjust based on content */
+    max-height: 400px; /* Limit the maximum height for small screens */
+  }
+  .container {
+    display: flex;
+    flex-direction: column; /* Stack tabs vertically on smaller screens */
+    justify-content: center;
+    align-items: center;
+    max-width: 900px; /* Use max-width instead of width for responsiveness */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .tab {
+    padding: 5px 20px; /* Reduce padding for smaller screens */
+  }
+  .explore {
+    font-size: 2rem; /* Adjust the font size for different screens */
+  }
+  
+  .sub-tab {
+    font-size: 1.5rem; /* Adjust the font size for different screens */
+  }
+  .song-title,
+  .artist-name {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add an ellipsis (...) at the end of the truncated text */
+  }
+      
+}
